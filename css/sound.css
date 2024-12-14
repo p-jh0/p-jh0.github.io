@@ -1,38 +1,42 @@
-#sound{
-	position: absolute;
-	left:13px;
-	top:5px;
+#sound {
+	position: fixed; /* 화면에서 항상 고정 */
+	left: 20px; /* 좌측 여백 */
+	bottom: 20px; /* 하단 여백 */
 	width: 100px;
 	height: 50px;
 	cursor: pointer;
 }
-#sound > div{
+#sound > div {
 	position: absolute;
 }
-#sound #sound_icon{
+#sound #sound_icon {
 	background: url(../assets/ui/sound.png);
 	background-size: auto 100%;
 	width: 40px;
 	height: 40px;
 	top: 5px;
-	left:2px;
+	left: 2px;
 }
-#sound #sound_on, #sound #sound_off{
+#sound #sound_on,
+#sound #sound_off {
 	left: 52px;
-    font-size: 30px;
-    line-height: 55px;
+	font-size: 30px;
+	line-height: 55px;
 }
-#sound #sound_on{
-	color:#fff;
+#sound #sound_on {
+	color: #fff;
 }
-#sound #sound_off{
-	color:#595959;
+#sound #sound_off {
+	color: #595959;
 }
-#sound[sound=off] #sound_icon{
+#sound[sound=off] #sound_icon {
 	background-position: -40px 0;
 }
-#sound[sound=on] #sound_on, #sound[sound=off] #sound_off{
+#sound[sound=on] #sound_on,
+#sound[sound=off] #sound_off {
 	display: block;
 }
-#sound[sound=off] #sound_on, #sound[sound=on] #sound_off{
+#sound[sound=off] #sound_on,
+#sound[sound=on] #sound_off {
 	display: none;
+}
