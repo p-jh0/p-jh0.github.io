@@ -1,8 +1,49 @@
-<html>
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-  <p>Hello World!</p>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>닦아내기 텍스트 애니메이션</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1e1e2f;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .text-container {
+      position: relative;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+      overflow: hidden;
+    }
+
+    .text {
+      display: inline-block;
+      white-space: nowrap;
+      position: relative;
+      clip-path: inset(0 100% 0 0); /* 텍스트가 오른쪽에서 나타남 */
+      animation: wipe-text 2s ease-in-out forwards;
+    }
+
+    @keyframes wipe-text {
+      0% {
+        clip-path: inset(0 100% 0 0); /* 시작 지점: 오른쪽에 숨겨짐 */
+      }
+      100% {
+        clip-path: inset(0 0 0 0); /* 모든 텍스트가 나타남 */
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="text-container">
+  <div class="text">알고리즘의 시작</div>
+</div>
 </body>
 </html>
