@@ -27,13 +27,13 @@
       display: inline-block;
       white-space: nowrap;
       position: relative;
-      clip-path: inset(0 100% 0 0); /* 텍스트가 오른쪽에서 나타남 */
+      clip-path: inset(100% 0 0 0); /* 텍스트가 오른쪽에서 나타남 */
       animation: wipe-text 2s ease-in-out forwards;
     }
 
     @keyframes wipe-text {
       0% {
-        clip-path: inset(0 100% 0 0); /* 시작 지점: 오른쪽에 숨겨짐 */
+        clip-path: inset(100% 0 0 0); /* 시작 지점: 오른쪽에 숨겨짐 */
       }
       100% {
         clip-path: inset(0 0 0 0); /* 모든 텍스트가 나타남 */
