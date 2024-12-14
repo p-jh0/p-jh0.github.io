@@ -1,0 +1,38 @@
+#sound{
+	position: absolute;
+	left:13px;
+	top:5px;
+	width: 100px;
+	height: 50px;
+	cursor: pointer;
+}
+#sound > div{
+	position: absolute;
+}
+#sound #sound_icon{
+	background: url(../assets/ui/sound.png);
+	background-size: auto 100%;
+	width: 40px;
+	height: 40px;
+	top: 5px;
+	left:2px;
+}
+#sound #sound_on, #sound #sound_off{
+	left: 52px;
+    font-size: 30px;
+    line-height: 55px;
+}
+#sound #sound_on{
+	color:#fff;
+}
+#sound #sound_off{
+	color:#595959;
+}
+#sound[sound=off] #sound_icon{
+	background-position: -40px 0;
+}
+#sound[sound=on] #sound_on, #sound[sound=off] #sound_off{
+	display: block;
+}
+#sound[sound=off] #sound_on, #sound[sound=on] #sound_off{
+	display: none;
