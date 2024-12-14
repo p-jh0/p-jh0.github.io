@@ -40,18 +40,30 @@
       }
     }
 
-    .music-toggle {
+    .music-control {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      width: 50px;
-      height: 50px;
+      display: flex;
+      align-items: center;
       cursor: pointer;
+      user-select: none;
+    }
+
+    .music-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
       transition: opacity 0.3s;
     }
 
-    .music-toggle.off {
+    .music-icon.off {
       opacity: 0.5; /* 끔 상태에서는 흐리게 */
+    }
+
+    .music-text {
+      color: white;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -60,9 +72,12 @@
     <div class="text">알고리즘의 시작</div>
   </div>
 
-  <img id="musicToggle" class="music-toggle off" src="https://via.placeholder.com/50?text=OFF" alt="Music Toggle">
+  <div id="musicControl" class="music-control">
+    <img id="musicIcon" class="music-icon" src="https://via.placeholder.com/40?text=🔊" alt="Music Icon">
+    <span id="musicText" class="music-text">켬</span>
+  </div>
 
-  <audio id="bgMusic" loop>
+  <audio id="bgMusic" loop autoplay>
     <source src="asset/music/bg_music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
