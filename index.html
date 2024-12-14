@@ -27,23 +27,46 @@
       display: inline-block;
       white-space: nowrap;
       position: relative;
-      clip-path: inset(0 0 100% 0); /* 텍스트가 오른쪽에서 나타남 */
+      clip-path: inset(0 0 100% 0); /* 텍스트가 아래에서 나타남 */
       animation: wipe-text 1s ease-in-out forwards;
     }
 
     @keyframes wipe-text {
       0% {
-        clip-path: inset(0 0 100% 0); /* 시작 지점: 오른쪽에 숨겨짐 */
+        clip-path: inset(0 0 100% 0); /* 시작 지점: 아래에 숨겨짐 */
       }
       100% {
         clip-path: inset(0 0 0 0); /* 모든 텍스트가 나타남 */
       }
     }
+
+    .music-toggle {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .music-toggle.off {
+      opacity: 0.5; /* 끔 상태에서는 흐리게 */
+    }
   </style>
 </head>
 <body>
-<div class="text-container">
-  <div class="text">알고리즘의 시작</div>
-</div>
+  <div class="text-container">
+    <div class="text">알고리즘의 시작</div>
+  </div>
+
+  <img id="musicToggle" class="music-toggle off" src="https://via.placeholder.com/50?text=OFF" alt="Music Toggle">
+
+  <audio id="bgMusic" loop>
+    <source src="asset/music/bg_music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="asset/js/musicToggle.js"></script>
 </body>
 </html>
