@@ -1,0 +1,17 @@
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table, th, td {
+    border: 1px solid chocolate;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: slateblue;
+}

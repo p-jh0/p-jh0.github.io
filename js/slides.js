@@ -15,6 +15,9 @@ const slideFiles = [
     "slides/slide13.html",
     "slides/slide14.html",
     "slides/slide15.html",
+    "slides/slide16.html",
+    "slides/slide17.html",
+    "slides/slide18.html",
 
 ];
 
@@ -53,6 +56,11 @@ function loadSlide(index) {
                     script.src = "js/coin.js";
                     document.body.appendChild(script);
                 }
+                if (currentSlideIndex === 14) {
+                    const script = document.createElement("script");
+                    script.src = "js/coinchange.js";
+                    document.body.appendChild(script);
+                }
                 // 애니메이션 클래스 재적용
                 const slide = slideContainer.querySelector(".slide");
                 if (slide) {
@@ -80,7 +88,7 @@ function loadSlide(index) {
         // 모든 슬라이드가 끝났을 때
         slideContainer.innerHTML = `
       <div class="slide">
-        <p>게임이 끝났습니다. 처음으로 돌아가려면 아래 버튼을 클릭하세요.</p>
+        <p>Created By p-jh0<br>Music - "Fouler l'horizon" by Komiku</p>
         <button class="slide-button" id="resetButton">처음으로</button>
       </div>
     `;
